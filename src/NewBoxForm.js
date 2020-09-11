@@ -10,7 +10,15 @@ class NewBoxForm extends React.Component{
   render(){
     return (
       <div>
-        Form
+        <form>
+          <label>Width: </label>
+          <input name="width" type="text" />
+          <label>Height:  </label>
+          <input name="height" type="text" />
+          <label>Color: </label>
+          <input name="color" type="text" />
+          <button type="submit">Add Box</button>
+        </form>
       </div>
     )
   }
