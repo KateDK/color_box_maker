@@ -9,10 +9,20 @@ class NewBoxForm extends React.Component{
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   }
+
+  handleSubmit= event =>{
+    event.preventDefault();
+    this.props.addBox(this.state);
+    this.setState({
+      width: "",
+      height: "",
+      color:"",});
+  }
+
   render(){
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>Width: </label>
           <input name="width" type="text" value={this.state.width} onChange={this.handleChange}/>
           <label>Height:  </label>
