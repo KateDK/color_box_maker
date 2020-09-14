@@ -1,13 +1,14 @@
 import React from 'react';
+import './Box.css';
 
 const Box = (props) => {
   const { width, height, color, id, removeBox } = props;
   const style = { width: width, height, backgroundColor: color };
   return (
-    <span>
-      <div className="Box" style={style}></div>
+    <div className="Box">
       <button onClick={() => removeBox(id)}>X</button>
-    </span>
+      <div style={style}></div>
+    </div>
   );
 };
 
