@@ -1,7 +1,6 @@
 import React from 'react';
 import NewBoxForm from './NewBoxForm';
 import Box from './Box';
-import { v4 as uuidv4 } from 'uuid';
 
 class BoxList extends React.Component {
   state = {
@@ -21,7 +20,9 @@ class BoxList extends React.Component {
             color={box.color}
             width={Number(box.width)}
             height={Number(box.height)}
-            key={uuidv4()}
+            key={box.id}
+            id={box.id}
+            removeBox={this.removeBox}
           />
         ))}
       </div>
