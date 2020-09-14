@@ -9,6 +9,13 @@ class BoxList extends React.Component {
   addBox = (box) => {
     this.setState({ colorBoxes: [...this.state.colorBoxes, box] });
   };
+
+  removeBox = (id) => {
+    this.setState({
+      colorBoxes: this.state.colorBoxes.filter((box) => box.id !== id),
+    });
+  };
+
   render() {
     const { colorBoxes } = this.state;
     return (
