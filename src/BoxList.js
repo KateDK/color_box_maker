@@ -14,7 +14,7 @@ class BoxList extends React.Component{
       <div>
       <NewBoxForm addBox={this.addBox}/>
       BoxList
-      {colorBoxes.map(box=><Box color={box.color} width={box.width} height={box.height}/>)}
+      {colorBoxes.map(box=><Box color={box.color} width={Number(box.width)} height={Number(box.height)}/>)}
       </div>)
   }
 }
